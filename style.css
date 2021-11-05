@@ -1,0 +1,164 @@
+:root {
+  --background-color: #dfe6fb;
+  --primary-color: hsl(245, 75%, 52%);
+  --secondary-color: hsl(225, 100%, 98%);
+  --text-color: hsl(223, 47%, 23%);
+  --text-muted-color: hsl(224, 23%, 55%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: red hat display;
+  color: var(--text-color);
+}
+/* ----text-styling---- */
+h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.price {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.desc {
+  line-height: 1.6em;
+}
+.change {
+  color: hsl(245, 73%, 60%);
+}
+button,
+.annual-plan,
+.change,
+.cancel {
+  font-size: 0.9em;
+  font-weight: 900;
+}
+.desc,
+.price,
+.cancel {
+  color: var(--text-muted-color);
+}
+/*----active state---- */
+button:hover,
+.change:hover,
+.cancel:hover {
+  cursor: pointer;
+}
+/* ----main style---- */
+.container {
+  background-color: white;
+}
+img {
+  width: 100%;
+}
+main {
+  padding: 10px;
+  text-align: center;
+}
+.card {
+  background-color: var(--secondary-color);
+}
+button {
+  box-shadow: 0 15px 15px 5px hsla(249, 100%, 70%, 0.205);
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  width: 100%;
+  min-height: 25vw;
+}
+.cancel {
+  display: inline-block;
+}
+.card,
+button {
+  border-radius: 10px;
+}
+h1,
+button,
+.desc,
+.card,
+.cancel {
+  margin-top: 25px;
+}
+
+@media (min-width: 320px) {
+  /*----mobile device----*/
+  body {
+    padding: 0 20px;
+    /* background style */
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-size: 100vw 60vh;
+  }
+  .container {
+    box-shadow: hsla(249, 100%, 70%, 0.158) 0px 30px 50px 0px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 80px auto;
+    max-width: 400px;
+  }
+  main {
+    padding: 0 20px 30px;
+  }
+  button {
+    min-height: 50px;
+  }
+  .desc {
+    margin: 10px 5px 20px;
+  }
+  .card {
+    padding: 15px;
+    text-align: left;
+    min-height: 85px;
+    /* card-grid style */
+    display: grid;
+    grid-template-columns: 55px 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .plan {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  /*----dekstop screen---*/
+  body {
+    /* background style */
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-size: 100vw 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  button,
+  .annual-plan,
+  .price,
+  .change,
+  .cancel {
+    font-size: 17px;
+  }
+  .container {
+    max-width: 450px;
+  }
+  main {
+    padding: 10px 50px 40px;
+  }
+  .card {
+    height: 100px;
+    width: 100%;
+  }
+  button {
+    min-height: 60px;
+    margin: 35px 0 20px;
+  }
+}
